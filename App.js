@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-
+import params from './src/params'
 
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text >Olá, Mundo!!</Text>
+        <Text style={styles.welcome}>Iniciando o Mines!</Text>
+        <Text style={styles.instructions}>Tamanho da grade: 
+        {params.getRowsAmount()}x{params.getColumnsAmount()}</Text>
       </View>
     );
   }
